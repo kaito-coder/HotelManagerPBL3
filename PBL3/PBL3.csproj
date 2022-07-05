@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0E280C3-B492-4C82-9AD4-86D0D479B468}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PBL3</RootNamespace>
+    <AssemblyName>PBL3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\Word\XuatBaoCaoWordBangMailMergeAspose\Dll\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BLLReservation.cs" />
+    <Compile Include="BLL\BLLService.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\CBBItems.cs" />
+    <Compile Include="DTO\Common.cs" />
+    <Compile Include="DTO\Dashboard.cs" />
+    <Compile Include="HotelManagerContext.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\Employee.cs" />
+    <Compile Include="DTO\Reservation.cs" />
+    <Compile Include="DTO\Room.cs" />
+    <Compile Include="DTO\Service.cs" />
+    <Compile Include="DTO\StatusRoom.cs" />
+    <Compile Include="DTO\TypeRoom.cs" />
+    <Compile Include="Migrations\202205300850175_creatDB-v2.cs" />
+    <Compile Include="Migrations\202205300850175_creatDB-v2.designer.cs">
+      <DependentUpon>202205300850175_creatDB-v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206020320576_editIDRoom.cs" />
+    <Compile Include="Migrations\202206020320576_editIDRoom.designer.cs">
+      <DependentUpon>202206020320576_editIDRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206021504299_editstringlength.cs" />
+    <Compile Include="Migrations\202206021504299_editstringlength.designer.cs">
+      <DependentUpon>202206021504299_editstringlength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206021559500_editstringlegth2.cs" />
+    <Compile Include="Migrations\202206021559500_editstringlegth2.designer.cs">
+      <DependentUpon>202206021559500_editstringlegth2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206021630369_editstringlength3.cs" />
+    <Compile Include="Migrations\202206021630369_editstringlength3.designer.cs">
+      <DependentUpon>202206021630369_editstringlength3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206030321184_edittringlength4.cs" />
+    <Compile Include="Migrations\202206030321184_edittringlength4.designer.cs">
+      <DependentUpon>202206030321184_edittringlength4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206090705285_addColumnIsPaid.cs" />
+    <Compile Include="Migrations\202206090705285_addColumnIsPaid.designer.cs">
+      <DependentUpon>202206090705285_addColumnIsPaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206190244138_dropAccountEmployee.cs" />
+    <Compile Include="Migrations\202206190244138_dropAccountEmployee.designer.cs">
+      <DependentUpon>202206190244138_dropAccountEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206190247355_dropTableAccount.cs" />
+    <Compile Include="Migrations\202206190247355_dropTableAccount.designer.cs">
+      <DependentUpon>202206190247355_dropTableAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206200121438_editDBv2.cs" />
+    <Compile Include="Migrations\202206200121438_editDBv2.designer.cs">
+      <DependentUpon>202206200121438_editDBv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206201220029_editDBv3.cs" />
+    <Compile Include="Migrations\202206201220029_editDBv3.designer.cs">
+      <DependentUpon>202206201220029_editDBv3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206201400498_addAccount.cs" />
+    <Compile Include="Migrations\202206201400498_addAccount.designer.cs">
+      <DependentUpon>202206201400498_addAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206201422324_addColumnRole.cs" />
+    <Compile Include="Migrations\202206201422324_addColumnRole.designer.cs">
+      <DependentUpon>202206201422324_addColumnRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ReportExtensionMethod.cs" />
+    <Compile Include="View\AddBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddBillForm.Designer.cs">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddOrUpdateReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddOrUpdateReservation.Designer.cs">
+      <DependentUpon>AddOrUpdateReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddUpdateEmmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddUpdateEmmployeeForm.Designer.cs">
+      <DependentUpon>AddUpdateEmmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddUpdateRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddUpdateRoomForm.Designer.cs">
+      <DependentUpon>AddUpdateRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddUpdateServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddUpdateServiceForm.Designer.cs">
+      <DependentUpon>AddUpdateServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BillForm.Designer.cs">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrderServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrderServiceForm.Designer.cs">
+      <DependentUpon>OrderServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReservationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ReservationForm.Designer.cs">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Migrations\202205300850175_creatDB-v2.resx">
+      <DependentUpon>202205300850175_creatDB-v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206020320576_editIDRoom.resx">
+      <DependentUpon>202206020320576_editIDRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206021504299_editstringlength.resx">
+      <DependentUpon>202206021504299_editstringlength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206021559500_editstringlegth2.resx">
+      <DependentUpon>202206021559500_editstringlegth2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206021630369_editstringlength3.resx">
+      <DependentUpon>202206021630369_editstringlength3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206030321184_edittringlength4.resx">
+      <DependentUpon>202206030321184_edittringlength4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206090705285_addColumnIsPaid.resx">
+      <DependentUpon>202206090705285_addColumnIsPaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206190244138_dropAccountEmployee.resx">
+      <DependentUpon>202206190244138_dropAccountEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206190247355_dropTableAccount.resx">
+      <DependentUpon>202206190247355_dropTableAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206200121438_editDBv2.resx">
+      <DependentUpon>202206200121438_editDBv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206201220029_editDBv3.resx">
+      <DependentUpon>202206201220029_editDBv3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206201400498_addAccount.resx">
+      <DependentUpon>202206201400498_addAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206201422324_addColumnRole.resx">
+      <DependentUpon>202206201422324_addColumnRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddBillForm.resx">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddOrUpdateReservation.resx">
+      <DependentUpon>AddOrUpdateReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddUpdateEmmployeeForm.resx">
+      <DependentUpon>AddUpdateEmmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddUpdateRoomForm.resx">
+      <DependentUpon>AddUpdateRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddUpdateServiceForm.resx">
+      <DependentUpon>AddUpdateServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BillForm.resx">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrderServiceForm.resx">
+      <DependentUpon>OrderServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReservationForm.resx">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Template\BillPrint.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-unlocked-vector-icons-security-padlock-password-privacy-symbol-graphic-design-logo-web-site-social-media-mobile-app-138707566.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon-trendy-flat-style-isolated-grey-background-user-symbol-user-icon-trendy-flat-style-isolated-grey-background-123663211.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon_150670.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_247889137_guKUbsdiv3s0Bfe3URiiYSksqlCQC63i.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room-service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sea-edge-79ab30e2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-from-rawpixel-id-5934041-jpeg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zovian-Technologies-Top-6-Software-Development-Methodologies.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand-arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
